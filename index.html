@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre las frutas frescas de Frutería del Día.">
+    <title>Frutería del Día | Inicio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="bg-slate-50 font-['Roboto'] text-slate-800 transition-colors duration-300">
+    <header id="inicio" class="bg-white px-4 py-5 transition-colors duration-300">
+        <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-4 sm:justify-start">
+            <img
+                src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=240&q=80"
+                alt="Selección de frutas frescas"
+                width="88"
+                height="88"
+                class="h-20 w-20 rounded-full border-4 border-orange-200 object-cover sm:h-22 sm:w-22">
+
+            <div class="text-center sm:text-left">
+                <h1 class="text-3xl font-bold text-orange-800 sm:text-4xl">
+                    Frutería del Día
+                </h1>
+                <p class="mt-1 text-sm text-slate-500 sm:text-base">
+                    Frescura y color en cada elección.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sticky top-0 z-50 bg-orange-100 shadow-md transition-colors duration-300" aria-label="Navegación principal">
+        <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-3">
+            <a href="index.html#inicio" class="font-bold text-orange-900">
+                Frutería del Día
+            </a>
+
+            <div class="flex flex-wrap items-center justify-center gap-1 sm:gap-3">
+                <a href="index.html#sobre-nosotros" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-orange-200 hover:text-orange-950">
+                    Inicio
+                </a>
+                <a href="index.html#galeria-frutas" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-orange-200 hover:text-orange-950">
+                    Frutas
+                </a>
+                <a href="index.html#temporada" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-orange-200 hover:text-orange-950">
+                    Temporada
+                </a>
+                <a href="carrito.html" class="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-orange-200 hover:text-orange-950">
+                    Carrito <span id="contadorCarrito" class="ml-1 rounded-full bg-orange-600 px-2 py-0.5 text-xs font-bold text-white">0</span>
+                </a>
+                <a href="contacto.html" class="rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">
+                    Contacto
+                </a>
+                <button
+                    id="modoOscuroBtn"
+                    type="button"
+                    aria-label="Activar o desactivar modo oscuro"
+                    class="h-10 w-10 rounded-full bg-slate-800 text-white transition hover:bg-slate-700">
+                    🌙
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="mx-auto max-w-7xl space-y-8 px-4 py-8 sm:px-6 lg:px-8">
+        <!-- Presentación de la frutería -->
+        <section id="sobre-nosotros" class="scroll-mt-24 rounded-3xl bg-orange-100 p-6 shadow-sm sm:p-10">
+            <p class="mb-2 text-sm font-bold uppercase tracking-widest text-orange-800">
+                Del campo a tu mesa
+            </p>
+            <h2 class="text-3xl font-bold text-orange-950 sm:text-4xl">
+                La mejor frutería del mundo
+            </h2>
+            <p id="descripcionFruteria" class="mt-4 max-w-3xl leading-7 text-slate-700">
+                En Frutería del Día encontrarás una gran variedad de frutas para llenar tu mesa de frescura, color y sabor. Nos esforzamos por ofrecer una selección variada y una atención amable.
+            </p>
+            <p id="informacionExtra" class="mt-3 hidden max-w-3xl leading-7 text-slate-700">
+                Explora nuestro catálogo, elige tus frutas favoritas y añádelas al carrito para organizar tu selección antes de continuar.
+            </p>
+            <button
+                id="verMasBtn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="informacionExtra"
+                class="mt-6 rounded-xl bg-orange-600 px-5 py-3 font-bold text-white transition hover:bg-orange-700">
+                Ver más
+            </button>
+        </section>
+
+        <!-- Galería de frutas: solo imagen, nombre y botón para añadir al carrito -->
+        <section id="galeria-frutas" class="scroll-mt-24 rounded-3xl border border-orange-100 bg-orange-50 p-4 shadow-sm sm:p-6 lg:p-8">
+            <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="text-sm font-bold uppercase tracking-widest text-orange-700">
+                        Nuestro catálogo
+                    </p>
+                    <h2 class="mt-2 text-3xl font-bold text-slate-900 sm:text-4xl">
+                        Nuestras frutas
+                    </h2>
+                </div>
+
+                <div class="w-full sm:max-w-xs">
+                    <label for="buscarFruta" class="mb-1 block text-sm font-semibold text-slate-700">
+                        Buscar fruta
+                    </label>
+                    <input
+                        id="buscarFruta"
+                        type="search"
+                        placeholder="Ej.: mango"
+                        class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-orange-500 focus:ring-2 focus:ring-orange-200">
+                </div>
+            </div>
+
+            <p id="mensajeCatalogo" class="mb-4 text-sm text-slate-500" aria-live="polite"></p>
+
+            <div id="listaFrutas" class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                <!-- Manzana -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Manzana">
+                    <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80" alt="Manzanas rojas" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Manzana</h3>
+                        <button type="button" data-agregar="Manzana" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Banana -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Banana">
+                    <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=800&q=80" alt="Bananas amarillas" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Banana</h3>
+                        <button type="button" data-agregar="Banana" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Naranja -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Naranja">
+                    <img src="https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=800&q=80" alt="Naranjas frescas" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Naranja</h3>
+                        <button type="button" data-agregar="Naranja" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Uvas -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Uvas">
+                    <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=800&q=80" alt="Racimo de uvas" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Uvas</h3>
+                        <button type="button" data-agregar="Uvas" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Pera -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Pera">
+                    <img src="https://images.unsplash.com/photo-1514756331096-242fdeb70d4a?auto=format&fit=crop&w=800&q=80" alt="Peras frescas" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Pera</h3>
+                        <button type="button" data-agregar="Pera" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Sandía -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Sandía">
+                    <img src="https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=800&q=80" alt="Sandía fresca" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Sandía</h3>
+                        <button type="button" data-agregar="Sandía" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Melón -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Melón">
+                    <img src="https://images.unsplash.com/photo-1571575173700-afb9492e6a50?auto=format&fit=crop&w=800&q=80" alt="Melón cortado" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Melón</h3>
+                        <button type="button" data-agregar="Melón" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Fresas -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Fresas">
+                    <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=800&q=80" alt="Fresas rojas" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Fresas</h3>
+                        <button type="button" data-agregar="Fresas" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Kiwi -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Kiwi">
+                    <img src="https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=800&q=80" alt="Kiwis frescos" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Kiwi</h3>
+                        <button type="button" data-agregar="Kiwi" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Limón -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Limón">
+                    <img src="https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&w=800&q=80" alt="Limones amarillos" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Limón</h3>
+                        <button type="button" data-agregar="Limón" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Mango -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Mango">
+                    <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=800&q=80" alt="Mangos maduros" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Mango</h3>
+                        <button type="button" data-agregar="Mango" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+
+                <!-- Piña -->
+                <article class="tarjetaFruta overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg" data-fruta="Piña">
+                    <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=800&q=80" alt="Piña madura" width="800" height="600" loading="lazy" class="h-36 w-full object-cover sm:h-48">
+                    <div class="p-3 text-center sm:p-4">
+                        <h3 class="text-lg font-bold text-slate-900">Piña</h3>
+                        <button type="button" data-agregar="Piña" class="mt-3 w-full rounded-lg bg-orange-600 px-3 py-2 text-sm font-bold text-white transition hover:bg-orange-700">Agregar</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tabla de datos: agrupa algunas frutas por categoría. -->
+        <section id="informacion-frutas" class="scroll-mt-24 rounded-3xl border border-orange-100 bg-white p-4 shadow-sm sm:p-6 lg:p-8">
+            <p class="text-sm font-bold uppercase tracking-widest text-orange-700">
+                Información del catálogo
+            </p>
+            <h2 class="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">
+                Frutas y categorías
+            </h2>
+            <div class="mt-5 overflow-x-auto rounded-xl">
+                <table id="tablaFrutas" class="w-full min-w-[420px] border-collapse text-left">
+                    <thead class="bg-orange-100 text-orange-950">
+                        <tr>
+                            <th scope="col" class="px-4 py-3">Fruta</th>
+                            <th scope="col" class="px-4 py-3">Categoría</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-700">
+                        <tr class="bg-white">
+                            <td class="px-4 py-3">Manzana</td><td class="px-4 py-3">Fruta de pepita</td>
+                        </tr>
+                        <tr class="bg-orange-50/50">
+                            <td class="px-4 py-3">Banana</td><td class="px-4 py-3">Fruta tropical</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="px-4 py-3">Naranja</td><td class="px-4 py-3">Cítrico</td>
+                        </tr>
+                        <tr class="bg-orange-50/50">
+                            <td class="px-4 py-3">Uvas</td><td class="px-4 py-3">Fruta de racimo</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="px-4 py-3">Pera</td><td class="px-4 py-3">Fruta de pepita</td>
+                        </tr>
+                        <tr class="bg-orange-50/50">
+                            <td class="px-4 py-3">Mango</td><td class="px-4 py-3">Fruta tropical</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Frutas de temporada: se mantiene debajo de la galería -->
+        <section id="temporada" class="scroll-mt-24 rounded-3xl border border-green-100 bg-green-50 p-6 shadow-sm sm:p-8">
+            <p class="text-sm font-bold uppercase tracking-widest text-green-800">
+                Selección de temporada
+            </p>
+            <h2 class="mt-2 text-2xl font-bold text-green-950 sm:text-3xl">
+                Frutas de temporada
+            </h2>
+            <ul class="mt-5 flex flex-wrap gap-3">
+                <li class="etiquetaTemporada rounded-full bg-white px-4 py-2 font-medium text-green-900 shadow-sm">Manzanas</li>
+                <li class="etiquetaTemporada rounded-full bg-white px-4 py-2 font-medium text-green-900 shadow-sm">Peras</li>
+                <li class="etiquetaTemporada rounded-full bg-white px-4 py-2 font-medium text-green-900 shadow-sm">Uvas</li>
+                <li class="etiquetaTemporada rounded-full bg-white px-4 py-2 font-medium text-green-900 shadow-sm">Cerezas</li>
+                <li class="etiquetaTemporada rounded-full bg-white px-4 py-2 font-medium text-green-900 shadow-sm">Fresas</li>
+            </ul>
+        </section>
+
+        <p id="mensajeCarrito" class="fixed bottom-4 right-4 z-50 hidden max-w-xs rounded-xl bg-green-700 px-4 py-3 font-semibold text-white shadow-lg" role="status" aria-live="polite"></p>
+    </main>
+
+    <footer class="border-t border-orange-100 bg-white px-4 py-5 transition-colors duration-300">
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 text-center text-sm text-slate-600 sm:flex-row sm:text-left">
+            <p>© 2026 Frutería del Día</p>
+            <a href="mailto:info@fruteria.com" class="font-medium text-orange-800 underline hover:text-orange-950">
+                info@fruteria.com
+            </a>
+            <div class="flex gap-4">
+                <a href="contacto.html" class="font-medium text-orange-800 hover:underline">Contacto</a>
+                <a href="carrito.html" class="font-medium text-orange-800 hover:underline">Carrito</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js" defer></script>
+</body>
+</html>

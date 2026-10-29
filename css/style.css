@@ -1,0 +1,168 @@
+/* Estilos generales del modo oscuro. */
+body.modo-oscuro {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+body.modo-oscuro header,
+body.modo-oscuro footer {
+    background-color: #111827;
+    border-color: #334155;
+}
+
+body.modo-oscuro nav {
+    background-color: #1e293b;
+}
+
+body.modo-oscuro nav a {
+    color: #e2e8f0;
+}
+
+body.modo-oscuro nav a.bg-orange-600 {
+    color: #ffffff;
+}
+
+body.modo-oscuro #modoOscuroBtn {
+    background-color: #f59e0b;
+    color: #422006;
+}
+
+/* Ajustar los colores de texto para mantener el contraste. */
+body.modo-oscuro .text-slate-900,
+body.modo-oscuro .text-slate-800,
+body.modo-oscuro .text-slate-700,
+body.modo-oscuro .text-slate-600,
+body.modo-oscuro .text-slate-500,
+body.modo-oscuro .text-slate-400 {
+    color: #e2e8f0;
+}
+
+body.modo-oscuro .text-orange-700,
+body.modo-oscuro .text-orange-800 {
+    color: #fdba74;
+}
+
+/* Fondos de las secciones principales. */
+body.modo-oscuro main > section:not(#sobre-nosotros):not(#galeria-frutas):not(#temporada) {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+body.modo-oscuro #sobre-nosotros {
+    background-color: #3b2517;
+    border: 1px solid #7c2d12;
+}
+
+body.modo-oscuro #sobre-nosotros h2 {
+    color: #ffedd5;
+}
+
+body.modo-oscuro #sobre-nosotros p:not(.text-orange-800) {
+    color: #e2e8f0;
+}
+
+body.modo-oscuro #galeria-frutas {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+body.modo-oscuro #galeria-frutas h2,
+body.modo-oscuro #galeria-frutas h3 {
+    color: #f8fafc;
+}
+
+body.modo-oscuro #galeria-frutas label {
+    color: #e2e8f0;
+}
+
+body.modo-oscuro .tarjetaFruta {
+    background-color: #111827;
+    border-color: #374151;
+}
+
+/* Mejorar el contraste de la sección de temporada. */
+body.modo-oscuro #temporada {
+    background-color: #132e24;
+    border-color: #166534;
+}
+
+body.modo-oscuro #temporada > p {
+    color: #86efac;
+}
+
+body.modo-oscuro #temporada h2 {
+    color: #f0fdf4;
+}
+
+body.modo-oscuro #temporada .etiquetaTemporada {
+    background-color: #14532d;
+    color: #dcfce7;
+}
+
+/* Campos de formulario y controles en modo oscuro. */
+body.modo-oscuro input:not([type="checkbox"]),
+body.modo-oscuro textarea,
+body.modo-oscuro select {
+    background-color: #111827;
+    color: #f8fafc;
+    border-color: #475569;
+}
+
+body.modo-oscuro input[type="checkbox"] {
+    accent-color: #f59e0b;
+}
+
+body.modo-oscuro #formularioContacto label {
+    color: #e2e8f0;
+}
+
+body.modo-oscuro #mensajeFormulario {
+    background-color: #1e293b;
+    border-color: #475569;
+    color: #e2e8f0;
+}
+
+/* Colores del carrito en modo oscuro. */
+body.modo-oscuro #carritoVacio {
+    background-color: #3b2517;
+    color: #ffedd5;
+}
+
+body.modo-oscuro #listaCarrito li {
+    background-color: #111827;
+    border-color: #374151;
+}
+
+/* Tabla del catálogo: bordes, filas y contraste. */
+#tablaFrutas th,
+#tablaFrutas td {
+    border: 1px solid #fed7aa;
+}
+
+#tablaFrutas th {
+    font-weight: 700;
+}
+
+body.modo-oscuro #tablaFrutas thead {
+    background-color: #334155;
+    color: #f8fafc;
+}
+
+body.modo-oscuro #tablaFrutas th,
+body.modo-oscuro #tablaFrutas td {
+    border-color: #475569;
+}
+
+body.modo-oscuro #tablaFrutas tbody tr {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+/* Color del texto del pie de página en modo oscuro. */
+body.modo-oscuro footer p.text-slate-600 {
+    color: #94a3b8;
+}
+
+body.modo-oscuro footer a {
+    color: #fdba74;
+}
